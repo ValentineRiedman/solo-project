@@ -32,6 +32,10 @@ function Nav() {
               Info Page
             </Link>
 
+            <Link className="navLink" to="/weatherpage">
+              Weather Page
+            </Link>
+
             <LogOutButton className="navLink" />
           </>
         )}
