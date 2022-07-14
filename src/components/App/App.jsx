@@ -19,7 +19,7 @@ import InfoPage from '../InfoPage/InfoPage';
 import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
-
+import WeatherPage from '../WeatherPage/WeatherPage';
 import './App.css';
 
 function App() {
@@ -59,6 +59,10 @@ function App() {
           >
             <UserPage />
           </ProtectedRoute>
+
+            <Route path="/weatherpage">
+              <WeatherPage/>
+            </Route>
 
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage
