@@ -1,6 +1,8 @@
 const weatherReducer = ( state =[], action ) =>{
   if( action.type === 'SET_WEATHER' ){
+    console.log(action.payload);
       return action.payload;
+      
   }
   return state;
 }
