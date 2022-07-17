@@ -3,7 +3,7 @@ import axios from 'axios';
 
 function* getWeather(){
     try{
-        const response = yield axios.get( 'https://api.weather.gov/gridpoints/MPX/108,69/forecast/')
+        const response = yield axios.get( 'https://api.weather.gov/gridpoints/MPX/108,69/forecast/')//api call for Minneapolis
         yield put( { type: 'SET_WEATHER', payload: response.data } )
     }catch(err){
         console.log(err);
