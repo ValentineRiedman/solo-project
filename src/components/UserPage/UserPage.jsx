@@ -10,6 +10,7 @@ function UserPage() {
 
   useEffect(() =>{
     dispatch( { type: 'GET_WEATHER'});{/*this is the get call for the weather api. It is here to preload the weather before the weather page is loaded*/}
+    dispatch( { type: 'GET_VEGETABLES'});
     }, []);
 
   return (

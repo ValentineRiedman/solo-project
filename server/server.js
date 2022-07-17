@@ -9,6 +9,7 @@ const passport = require('./strategies/user.strategy');
 
 // Route includes
 const userRouter = require('./routes/user.router');
+const vegRouter = require( './routes/vegetables.router')//this is a spot to start routing for my vegetables table
 
 // Body parser middleware
 app.use(bodyParser.json());
@@ -23,6 +24,7 @@ app.use(passport.session());
 
 /* Routes */
 app.use('/api/user', userRouter);
+app.use( '/api/vegetables', vegRouter);//this is also for the route for the vegetables table
 
 // Serve static files
 app.use(express.static('build'));
