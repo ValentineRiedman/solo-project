@@ -117,12 +117,13 @@ Weather widget
 
 .weather{
   float: right;
-  margin-right:50px;
+  margin-right:90px;
   text-align: center;
   border-style: solid;
   border-radius: 5px;
   background-color: #00acb0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color:#f8f8f8
 }
 
 .icon{

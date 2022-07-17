@@ -9,7 +9,9 @@ function AboutPage() {
   return (
     <div className="container">
       <div>
-        <p>This about page is for anyone to read!</p>
+        <h2>About Us</h2>
+        <p className="about">With help from The National Weather Service and mother nature, our app hopes to assist even the most novice green 
+          thumb to grow their very own dream garden. Just to make salsa. Your dreams are all about salsa. Salsa.</p>
       </div>
     </div>
   );
