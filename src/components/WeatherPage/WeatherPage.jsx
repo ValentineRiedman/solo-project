@@ -31,7 +31,8 @@ function WeatherPage(){
                     return (
                         <div key={veggies.id}>
                             <p>{veggies.veg_name}</p>
-                            <img scr={veggies.images} alt={veggies.veg_name}/>
+                            <img src={veggies.images} alt={veggies.veg_name}/>
+                            
                             <p>{veggies.water_needs}</p>                            
                         </div>
                     )
