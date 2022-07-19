@@ -9,5 +9,28 @@ function _template( props ){
         </div>
     );
 }
+{/* 
+
+<main>
+<Typography variant="h6">
+    <Grid
+    container
+    display=“flex”
+    wrap=“wrap”
+    justify=“center”
+    spacing={6}
+>
+    {vegetables.map((vegetable) => (
+        <Grid item key={vegetable.id}>
+        {vegetable.veg_name}
+        <img src={vegetable.images} alt={vegetable.veg_name} />
+        {vegetable.water_needs}
+        </Grid>
+    ))}
+</Grid> 
+</Typography>
+</main>
+*/}
+
 
 export default _template;

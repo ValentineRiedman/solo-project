@@ -123,9 +123,24 @@ Weather widget
   border-radius: 5px;
   background-color: #00acb0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color:#f8f8f8
+  color:#f8f8f8;
+  margin-left: 370px;
 }
 
 .icon{
   margin:10px
+}
+
+/* --------------------------------------------------------------------------------
+Vegetables
+-------------------------------------------------------------------------------- */
+
+.veggies{
+  display: inline-grid;
+  column-gap: 50px;
+  row-gap: 5px;
+  flex-wrap: wrap;
+  margin:40px;
+  justify-content: center;
+  margin-right: 50px;
 }
