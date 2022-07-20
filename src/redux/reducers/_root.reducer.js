@@ -3,6 +3,7 @@ import errors from './errors.reducer';
 import user from './user.reducer';
 import weather from './weather.reducer';
 import vegetables from './vegetables.reducer'
+import rain from './rain.reducer'
 
 // rootReducer is the primary reducer for our entire project
 // It bundles up all of the other reducers so our project can use them.
@@ -15,6 +16,7 @@ const rootReducer = combineReducers({
   user, // will have an id and username if someone is logged in
   weather, //will display weather through api call
   vegetables, //will display vegetables from vegetable table
+  rain,//will display rain totals of the last 6 hours
 });
 
 export default rootReducer;

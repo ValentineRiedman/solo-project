@@ -119,8 +119,9 @@ Weather widget
   float: right;
   margin-right:60px;
   text-align: center;
-  border-style: solid;
-  border-radius: 5px;
+  border-color: #014041;
+  border-width: 1px 1px 3px;
+  border-radius: 4px;
   background-color: #00acb0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color:#f8f8f8;
@@ -143,4 +144,5 @@ Vegetables
   margin:40px;
   justify-content: center;
   margin-right: 50px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
