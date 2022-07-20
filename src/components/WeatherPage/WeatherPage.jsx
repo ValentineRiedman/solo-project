@@ -10,6 +10,7 @@ function WeatherPage() {
     const rain = useSelector(store => store.rain)
 
     const [hook, setHook] = useState(null)
+    
 
     const getWeather = () => {
         dispatch( { type: 'GET_WEATHER'});
