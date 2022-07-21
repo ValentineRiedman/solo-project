@@ -20,6 +20,7 @@ import LandingPage from '../LandingPage/LandingPage';
 import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import WeatherPage from '../WeatherPage/WeatherPage';
+import CreatePage from '../CreateGarden/CreateGarden';
 import './App.css';
 
 function App() {
@@ -63,6 +64,9 @@ function App() {
 
             <Route path="/weatherpage">
               <WeatherPage/>
+            </Route>
+            <Route path="/creategarden">
+              <CreatePage/>
             </Route>
 
           <ProtectedRoute

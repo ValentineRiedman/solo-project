@@ -36,6 +36,10 @@ function Nav() {
               Weather Page
             </Link>
 
+            <Link className="navLink" to="/creategarden">
+              Create Garden Page
+            </Link>
+
             <LogOutButton className="navLink" />
           </>
         )}
