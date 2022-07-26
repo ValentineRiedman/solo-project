@@ -7,7 +7,7 @@ import { useDispatch} from 'react-redux';
 function VeggieItem( props ){
     const [ show, setShow ] = useState( null )
     const dispatch = useDispatch();
-
+    // justifyContent={"space-evenly"} alignContent={"center”}
     
     const addVeggie = () =>{
         console.log('this veggie is', props.veggie.veg_name );
@@ -16,7 +16,7 @@ function VeggieItem( props ){
 
     return (
         <Container>
-            <Grid container display="flex" wrap="nowrap" justifyContent="center" spacing={3} >
+            <Grid container display="flex" wrap="wrap" justifyContent="center" spacing={5} >
                                 
                                 <Grid item key={props.veggie.id} >
                                     <Paper><p>{props.veggie.veg_name}</p><img src={props.veggie.images}/>

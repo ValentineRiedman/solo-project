@@ -7,9 +7,10 @@ const router = express.Router();
  */
  router.get('/', (req, res) => {
   // GET route code here for vegetables table
-  const queryString = `SELECT * FROM "user" JOIN garden ON "user".id= garden.user_id JOIN vegetables ON garden.veggie_id = vegetables.id WHERE garden.user_id = "user".id`;
+  const queryString = `SELECT * FROM "user" JOIN garden ON "user".id= garden.user_id JOIN vegetables ON garden.veggie_id = vegetables.id WHERE garden.user_id = $1`;
+  const value = [req.user.id];
   pool
-    .query( queryString )
+    .query( queryString, value )
     .then( ( result ) =>{
       res.send( result.rows);
     })

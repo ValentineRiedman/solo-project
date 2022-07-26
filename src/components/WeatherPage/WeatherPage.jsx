@@ -45,19 +45,7 @@ function WeatherPage() {
                         {/* <p>DewPoint:{rain.features[0].properties.dewpoint.value}</p> */}
 
                     </div>
-                    <div className="vegetables">
-                        {vegetables.map(veggies => {
-                            {/*mapping through the vegetables db info from vegetables table*/ }
-                            return (
-                                <div className="veggies" key={veggies.id}>
-                                    <p>{veggies.veg_name}</p>{/*this displays vegetables names from db table*/}
-                                    <img src={veggies.images} alt={veggies.veg_name} />{/*this displays vegetables images from db table*/}
-                                    <p>{veggies.water_needs}</p>{/*this displays vegetables water needs from cd table*/}
-                                    <button className='btn' onClick={setHook}>Add to Garden</button>
-                                </div>
-                            )
-                        })}
-                    </div>
+                    
                     <div>
                         {garden.map(jardin =>{
                             return(
