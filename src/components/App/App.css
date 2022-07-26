@@ -136,7 +136,7 @@ Weather widget
 Vegetables
 -------------------------------------------------------------------------------- */
 
-.veggies{
+/* .veggies{
   display: inline-grid;
   column-gap: 50px;
   row-gap: 5px;
@@ -145,4 +145,16 @@ Vegetables
   justify-content: center;
   margin-right: 50px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}   */
+
+.addButton{
+  justify-content: center;
+}
+
+/* --------------------------------------------------------------------------------
+Heading
+-------------------------------------------------------------------------------- */
+
+.heading{
+  justify-content: center;
 }

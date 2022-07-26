@@ -5,6 +5,7 @@ import userSaga from './user.saga';
 import weatherSaga from './weather.saga';
 import vegetablesSaga from './vegetables.saga';
 import rainSaga from './rain.saga';
+import gardenSaga from './garden.saga';
 
 // rootSaga is the primary saga.
 // It bundles up all of the other sagas so our project can use them.
@@ -21,5 +22,6 @@ export default function* rootSaga() {
     weatherSaga(),//saga for weather api
     vegetablesSaga(),//saga for vegetables table
     rainSaga(),//saga for rain from weather api
+    gardenSaga(),//saga for garden table
   ]);
 }

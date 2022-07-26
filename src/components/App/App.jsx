@@ -62,12 +62,13 @@ function App() {
             <UserPage />
           </ProtectedRoute>
 
-            <Route path="/weatherpage">
+            <ProtectedRoute exact path="/weatherpage">
               <WeatherPage/>
-            </Route>
-            <Route path="/creategarden">
+            </ProtectedRoute>
+
+            <ProtectedRoute exact path="/creategarden">
               <CreatePage/>
-            </Route>
+            </ProtectedRoute>
 
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage

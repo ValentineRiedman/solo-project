@@ -8,6 +8,7 @@ function WeatherPage() {
     const weather = useSelector(store => store.weather)
     const vegetables = useSelector(store => store.vegetables)
     const rain = useSelector(store => store.rain)
+    const garden = useSelector(store => store.garden)
 
     const [hook, setHook] = useState(null)
     
@@ -16,6 +17,7 @@ function WeatherPage() {
         dispatch( { type: 'GET_WEATHER'});
         dispatch( { type: 'GET_VEGETABLES'});
         dispatch( { type: 'GET_RAIN'});
+        dispatch( { type: 'GET_GARDEN'});        
     }
     useEffect(() =>{
         getWeather();
@@ -24,7 +26,7 @@ function WeatherPage() {
     return (
         <div>
             {/*ternary operator to make sure all dispatches are complete before showing page */}
-            {weather.length === 0 ? (  
+            {weather.length || rain.length === 0 ? (  
                 <p>loading..</p>
             ) : (
                 <div>
@@ -53,6 +55,13 @@ function WeatherPage() {
                                     <p>{veggies.water_needs}</p>{/*this displays vegetables water needs from cd table*/}
                                     <button className='btn' onClick={setHook}>Add to Garden</button>
                                 </div>
+                            )
+                        })}
+                    </div>
+                    <div>
+                        {garden.map(jardin =>{
+                            return(
+                                <p>{jardin.veg_name}</p>
                             )
                         })}
                     </div>

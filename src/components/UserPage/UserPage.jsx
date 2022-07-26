@@ -9,7 +9,6 @@ function UserPage() {
   const dispatch = useDispatch();
 
   useEffect(() =>{
-    dispatch( { type: 'GET_WEATHER'});{/*this is the get call for the weather api. It is here to preload the weather before the weather page is loaded*/}
     dispatch( { type: 'GET_VEGETABLES'});
     }, []);
 
@@ -17,7 +16,6 @@ function UserPage() {
     <div className="container">
       <h2>Welcome, {user.username}!</h2>
       <p>Your ID is: {user.id}</p>
-      <p>Your role is: {user.role}</p>
       <LogOutButton className="btn" />
     </div>
   );

@@ -10,16 +10,17 @@ function CreateGarden(props) {
   // Using hooks we're creating local state for a "heading" variable with
   // a default value of 'Functional Component'
   const store = useSelector(store => store.vegetables)
-  const [heading, setHeading] = useState('Functional Component');
+  const [heading, setHeading] = useState('Create Garden');
 
   useEffect(() =>{
     dispatch( { type: 'GET_VEGETABLES'});
+    dispatch( { type: 'GET_GARDEN'});
 }, []);
 
   return (
     <div>
       <p></p>
-      <h2>{heading}</h2>
+      <h2 className="heading">{heading}</h2>
       <VeggieList vegetable={store}/>
     </div>
   );
