@@ -1,5 +1,6 @@
 import { put, takeLatest } from 'redux-saga/effects';
 import axios from 'axios';
+import { useReducer } from 'react';
 
 function* getGarden(){
     try{
@@ -8,14 +9,14 @@ function* getGarden(){
         yield put( { type: 'SET_GARDEN', payload: response.data } );
     }catch(err){
         console.log(err);
-        alert( 'garden nope' );
+        alert( 'get garden nope' );
     }
 }
 
 function* addGarden(action){
     try{
-        const response = yield axios.post("/api/garden", {veggie_id: action.payload} );
-
+        const response = yield axios.post("/api/garden", action.payload );
+        yield put ( { type: 'GET_GARDEN' } );
     }catch (error){
         console.log('Error in post', error);
         alert("nope adding garden")

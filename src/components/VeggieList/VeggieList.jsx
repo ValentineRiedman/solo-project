@@ -12,15 +12,9 @@ function VeggieList( props ){
     useEffect(() =>{
         console.log('this the console log of props:', props);
       }, []);
-//     <div>
-
-
-            
-//     {/* {props.vegetable.map(veggie =>(<VeggieItem key={veggie.id} veggie={veggie}/>))}
-//                     {/*mapping through the vegetables db info from vegetables table*/ }                             
-// </div>
    
     return (
+        <Container>
         <Grid container display={"flex"} wrap={"wrap"} justifyContent={"space-evenly"} alignContent={"center"} spacing={5} padding={5}>
         {props.vegetable.map((veggie) => {
           return(
@@ -30,6 +24,7 @@ function VeggieList( props ){
           );
         })}
       </Grid>
+      </Container>
     );
 }
 

@@ -49,7 +49,11 @@ function WeatherPage() {
                     <div>
                         {garden.map(jardin =>{
                             return(
+                                <div>
                                 <p>{jardin.veg_name}</p>
+                                <img src={jardin.images}/>
+
+                               </div> 
                             )
                         })}
                     </div>

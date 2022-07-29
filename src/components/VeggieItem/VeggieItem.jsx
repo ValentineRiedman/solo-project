@@ -7,11 +7,11 @@ import { useDispatch} from 'react-redux';
 function VeggieItem( props ){
     const [ show, setShow ] = useState( null )
     const dispatch = useDispatch();
-    // justifyContent={"space-evenly"} alignContent={"center”}
+    
     
     const addVeggie = () =>{
-        console.log('this veggie is', props.veggie.veg_name );
-        dispatch( { type: 'ADD_VEGGIE', } );
+        console.log('this veggie is', props.veggie.id );
+        dispatch( { type: 'ADD_VEGGIE', payload: props.veggie } );
     }
 
     return (

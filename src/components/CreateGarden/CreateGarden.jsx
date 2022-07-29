@@ -19,9 +19,14 @@ function CreateGarden(props) {
 
   return (
     <div>
+    <div>
       <p></p>
       <h2 className="heading">{heading}</h2>
-      <VeggieList vegetable={store}/>
+      <n/>
+      <VeggieList vegetable={store}/>  
+    </div>
+    <div className="seeButton">    
+    </div>
     </div>
   );
 }

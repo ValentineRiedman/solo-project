@@ -91,6 +91,12 @@ Alert
   font-size: 0.8rem;
 }
 
+.seeButton{
+  margin: 50px;
+  float:inline-end;
+  
+}
+
 /* --------------------------------------------------------------------------------
 Form Treatment
 -------------------------------------------------------------------------------- */
@@ -120,9 +126,9 @@ Weather widget
   margin-right:60px;
   text-align: center;
   border-color: #014041;
-  border-width: 1px 1px 3px;
+  border-width: 2px 2px 6px;
   border-radius: 4px;
-  background-color: #00acb0;
+  background-color: #00b029;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color:#f8f8f8;
   margin-left: 370px;
@@ -156,5 +162,5 @@ Heading
 -------------------------------------------------------------------------------- */
 
 .heading{
-  justify-content: center;
+  text-align: center;
 }

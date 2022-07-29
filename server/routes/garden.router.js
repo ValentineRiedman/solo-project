@@ -23,16 +23,18 @@ const router = express.Router();
 /**
  * POST route template
  */
-// router.post('/', (req, res) => {
-//   const queryString= `INSERT INTO garden ( veggie_id , user_id ) VALUES( $1, $2);`
-//   values = [ req.body.veggie_id, req.body.user_id ]
-//   pool.query (queryString.values).then ((results)=>{
-//     res.sendStatus (200); 
-//   }).catch((err)=>{
-//     console.log (err);
-//     res.sendStatus(500);
-//   });
-// });
+router.post('/', (req, res) => {
+    console.log( '/garden POST', req.body);
+  const queryString= `INSERT INTO garden ( veggie_id , user_id ) VALUES( $1, $2 );`
+  values = [ req.body.id , req.user.id ]
+  pool.query (queryString , values ).then ((results)=>{
+    console.log('results from POST', results)
+    res.sendStatus (200); 
+  }).catch((err)=>{
+    console.log (err);
+    res.sendStatus(500);
+  });
+});
 
 /**
  * DELETE
@@ -40,7 +42,7 @@ const router = express.Router();
 router.delete ('/:id', (req,res)=>{
   const queryString = 'DELETE FROM inventory WHERE id=$1';
   values = [req.params.id];
-  pool.query(queryString.value).then((results)=>{
+  pool.query(queryString, value).then((results)=>{
     res.sendStatus(200); 
   }).catch ((err)=>{
     console.log(err);
