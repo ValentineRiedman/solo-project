@@ -21,6 +21,7 @@ import LoginPage from '../LoginPage/LoginPage';
 import RegisterPage from '../RegisterPage/RegisterPage';
 import WeatherPage from '../WeatherPage/WeatherPage';
 import CreatePage from '../CreateGarden/CreateGarden';
+import GardenPage from '../GardenPage/GardenPage';
 import './App.css';
 
 function App() {
@@ -62,13 +63,21 @@ function App() {
             <UserPage />
           </ProtectedRoute>
 
+
+          <ProtectedRoute exact path="/creategarden">
+              <CreatePage/>
+            </ProtectedRoute>
+
+
+            <ProtectedRoute exact path="/gardenpage">
+              <GardenPage/>
+            </ProtectedRoute>
+
+
             <ProtectedRoute exact path="/weatherpage">
               <WeatherPage/>
             </ProtectedRoute>
 
-            <ProtectedRoute exact path="/creategarden">
-              <CreatePage/>
-            </ProtectedRoute>
 
           <ProtectedRoute
             // logged in shows InfoPage else shows LoginPage

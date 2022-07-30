@@ -16,7 +16,7 @@ function VeggieItem( props ){
 
     return (
         <Container>
-            <Grid container display="flex" wrap="wrap" justifyContent="center" spacing={5} >
+            <Grid className="veggieSeed" container display="flex" wrap="wrap" justifyContent="center" spacing={5}>
                                 
                                 <Grid item key={props.veggie.id} >
                                     <Paper><p>{props.veggie.veg_name}</p><img src={props.veggie.images}/>

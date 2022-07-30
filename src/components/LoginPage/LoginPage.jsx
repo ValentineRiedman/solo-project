@@ -7,8 +7,8 @@ function LoginPage() {
 
   return (
     <div>
+      <img className="mainLogo" src="/images/SalsaGarden_Logo.png"/>
       <LoginForm />
-
       <center>
         <button
           type="button"

@@ -10,7 +10,7 @@ function Nav() {
   return (
     <div className="nav">
       <Link to="/home">
-        <h2 className="nav-title">Salsa Garden</h2>
+        <img className="headerLogo" src="/images/SalsaGarden_HeaderLogo.png"/>
       </Link>
       <div>
         {/* If no user is logged in, show these links */}
@@ -32,12 +32,12 @@ function Nav() {
               Info Page
             </Link>
 
-            <Link className="navLink" to="/weatherpage">
-              Weather Page
-            </Link>
-
             <Link className="navLink" to="/creategarden">
               Create Garden Page
+            </Link>
+
+            <Link className="navLink" to="/gardenpage">
+              Garden Page
             </Link>
 
             <LogOutButton className="navLink" />

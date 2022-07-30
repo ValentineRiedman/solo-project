@@ -21,11 +21,21 @@ function* addGarden(action){
         console.log('Error in post', error);
         alert("nope adding garden")
     }
-
 }
-function* vegetablesSaga(){
+
+function* pruneGarden(action) {
+  
+  try{
+    const response = yield axios.delete("/api/garden", action.payload.jardin.id );
+    yield put({ type: 'GET_GARDEN', payload: action.payload }); 
+  }catch (error) {
+    console.log('delete failed', error);
+  }
+}
+function* gardenSaga(){
     yield takeLatest('GET_GARDEN', getGarden);
     yield takeLatest( 'ADD_VEGGIE', addGarden);
+    yield takeLatest( 'PRUNE_VEGGIE', pruneGarden);
 }
 
-export default vegetablesSaga;
+export default gardenSaga;

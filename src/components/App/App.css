@@ -7,6 +7,8 @@ body,
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0px;
+  background-color: #074F4B;
+  color: aliceblue;
 }
 
 img {
@@ -59,6 +61,38 @@ Button
   text-decoration: none;
 }
 
+.seeButton{
+  margin: 50px;
+  float:inline-end;
+}
+
+.addButton{
+  background-color: #00ff3c;
+}
+
+.addButton:hover{
+  background-color: #014041;
+  color: antiquewhite;
+}
+
+.addButton:focus{
+  background-color: #026c1b;
+  color: antiquewhite;
+}
+
+.deleteButton{
+  background-color: #00ff3c;
+}
+
+.deleteButton:hover{
+  background-color: #014041;
+  color: antiquewhite;
+}
+
+.deleteButton:focus{
+  background-color: #026c1b;
+  color: antiquewhite;
+}
 /* This line makes the "Register" and "Login" buttons look like links */
 .btn_asLink {
   padding: 0;
@@ -91,23 +125,20 @@ Alert
   font-size: 0.8rem;
 }
 
-.seeButton{
-  margin: 50px;
-  float:inline-end;
-  
-}
+
 
 /* --------------------------------------------------------------------------------
 Form Treatment
 -------------------------------------------------------------------------------- */
 
 .formPanel {
+  justify-content: right;
   box-sizing: border-box;
   width: 400px;
   max-width: 100%;
   padding: 25px;
   margin: 0 auto 20px;
-  background-color: #efefef;
+  background-color: #71220a;
   border-radius: 3px;
   box-shadow: 0 1px 2px rgb(0, 0, 0, 0.4);
 }
@@ -123,19 +154,21 @@ Weather widget
 
 .weather{
   float: right;
-  margin-right:60px;
+  margin-left: 10px;
+  margin-right: 90px;
+  padding: 3px;
   text-align: center;
   border-color: #014041;
-  border-width: 2px 2px 6px;
+  border-width: 1px 1px 3px;
   border-radius: 4px;
-  background-color: #00b029;
+  background-color: #00adb0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color:#f8f8f8;
-  margin-left: 370px;
+
 }
 
 .icon{
-  margin:10px
+  margin: 2px;
 }
 
 /* --------------------------------------------------------------------------------
@@ -154,13 +187,50 @@ Vegetables
 }   */
 
 .addButton{
-  justify-content: center;
+  justify-content: right;
 }
 
+.veggieSeed{
+  background-color: #074F4B;
+  
+}
 /* --------------------------------------------------------------------------------
 Heading
 -------------------------------------------------------------------------------- */
 
 .heading{
   text-align: center;
+}
+
+
+
+
+
+.jardinName{
+  justify-content: center;
+}
+
+.mainLogo{
+  justify-content: right;
+  margin-top: 75px;
+  margin-right: 120px;;
+  position:fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;  
+  height: auto; 
+  width: auto; 
+  max-width: 500px; 
+  max-height: 500px;
+}
+
+.headerLogo{
+  margin-left: 30px;
+  margin-top: 10px;
+  max-width: 300px; 
+  max-height: 300px;
+}
+
+.images{
+  box-shadow: 3px 3px 6px lightblue;
 }
