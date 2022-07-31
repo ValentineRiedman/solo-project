@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useReducer } from 'react';
 import {useSelector, useDispatch} from 'react-redux';
 import GardenList from '../GardenList/GardenList';
 import WeatherPage from '../WeatherPage/WeatherPage';
@@ -11,6 +11,7 @@ function GardenPage(props) {
   // Using hooks we're creating local state for a "heading" variable with
   // a default value of 'Functional Component'
   const store = useSelector(store => store.garden);
+  const user = useSelector(store => store.user);
   const [heading, setHeading] = useState('Garden');
 
   useEffect(() =>{
@@ -20,7 +21,7 @@ function GardenPage(props) {
 
   return (
     <div>
-      <h2 className="heading">{heading}</h2>
+      <h2 className="heading">{user.username}'s {heading}</h2>
       <WeatherPage/>
       <GardenList garden={store}/>  
     </div>

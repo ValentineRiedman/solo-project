@@ -164,8 +164,11 @@ Weather widget
   background-color: #00adb0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color:#f8f8f8;
-
+  box-shadow: 3px 3px 6px rgb(81, 79, 79)
+  ;
 }
+
+
 
 .icon{
   margin: 2px;

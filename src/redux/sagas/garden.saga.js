@@ -19,15 +19,15 @@ function* addGarden(action){
         yield put ( { type: 'GET_GARDEN' } );
     }catch (error){
         console.log('Error in post', error);
-        alert("nope adding garden")
+        alert("nope adding garden");
     }
 }
 
 function* pruneGarden(action) {
   
   try{
-    const response = yield axios.delete("/api/garden", action.payload.jardin.id );
-    yield put({ type: 'GET_GARDEN', payload: action.payload }); 
+    const response = yield axios.delete("/api/garden", action.payload.id );
+    yield put({ type: 'GET_GARDEN' }); 
   }catch (error) {
     console.log('delete failed', error);
   }
