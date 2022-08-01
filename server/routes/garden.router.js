@@ -53,4 +53,16 @@ router.delete ('/:id', ( req, res )=>{
    res.sendStatus(500); 
   });
 });
+
+router.post ('/', ( req, res ) =>{
+  console.log(req.body);
+  const queryString =`INSERT INTO "garden" ( "notes" ) VALUES ($1) WHERE "veggie_id" = $2 AND "user_id" = $3;`
+  values = [ req.body.notes, req.body.id, req.user.id ]
+  pool.query( queryString, values).then((results)=>{
+    res.sendStatus(200);
+  }).catch ((err)=>{
+    console.log(err);
+    res.sendStatus(500);
+  });
+});
 module.exports = router;

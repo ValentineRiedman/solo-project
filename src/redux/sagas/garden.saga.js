@@ -32,13 +32,27 @@ function* pruneGarden(action) {
     yield put({ type: 'GET_GARDEN' }); 
   }catch (error) {
     console.log('delete failed', error);
-    alert('nope delete')
+    alert('nope delete');
   }
 }
+
+function* noteGarden(action) {
+    try{
+    console.log('in PUT SAGA', action.payload);
+    const response = yield axios.put("/api/garden/", action.payload  );
+    yield put({ type: 'GET_GARDEN'});
+    }catch (error){
+        console.log('PUT failed', error)
+        alert('nope PUT');
+    }
+}
+
+
 function* gardenSaga(){
     yield takeLatest('GET_GARDEN', getGarden);
     yield takeLatest( 'ADD_VEGGIE', addGarden);
     yield takeLatest( 'PRUNE_VEGGIE', pruneGarden);
+    yield takeLatest( 'ADD_NOTE', noteGarden);
 }
 
 export default gardenSaga;
