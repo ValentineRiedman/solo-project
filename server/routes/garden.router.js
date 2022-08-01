@@ -54,10 +54,10 @@ router.delete ('/:id', ( req, res )=>{
   });
 });
 
-router.post ('/', ( req, res ) =>{
+router.put ('/', ( req, res ) =>{
   console.log(req.body);
-  const queryString =`INSERT INTO "garden" ( "notes" ) VALUES ($1) WHERE "veggie_id" = $2 AND "user_id" = $3;`
-  values = [ req.body.notes, req.body.id, req.user.id ]
+  const queryString =`UPDATE "garden" SET notes = $1 WHERE "veggie_id" = $2 AND "user_id" = $3;`
+  values = [ req.body.notes, req.body.veggie_id, req.user.id ]
   pool.query( queryString, values).then((results)=>{
     res.sendStatus(200);
   }).catch ((err)=>{

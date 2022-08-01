@@ -21,13 +21,14 @@ function GardenItem(props) {
 }
 
 const changeNote = ( event ) => {
-  setNote( event.target.value);
   console.log( note );
+  setNote( event.target.value);  
 }
 
 const addNote = ()=>{
-  console.log('this veggie is', note );
-  dispatch( { type: 'ADD_NOTE', payload: note } );
+  console.log('this veggie is', props.jardin.id, note );
+  dispatch( { type: 'ADD_NOTE', payload: {  veggie_id: props.jardin.id ,notes: note } } );
+  dispatch( { type: 'GET_GARDEN'});
 }
 
 

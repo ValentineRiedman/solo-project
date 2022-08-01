@@ -39,11 +39,11 @@ function* pruneGarden(action) {
 function* noteGarden(action) {
     try{
     console.log('in PUT SAGA', action.payload);
-    const response = yield axios.put("/api/garden/", action.payload  );
-    yield put({ type: 'GET_GARDEN'});
+    const response = yield axios.put(`/api/garden`, action.payload);
+    // yield put({ type: 'GET_GARDEN'});
     }catch (error){
-        console.log('PUT failed', error)
-        alert('nope PUT');
+        console.log('PUT failed', error);
+        alert(' SAGA nope PUT');
     }
 }
 
