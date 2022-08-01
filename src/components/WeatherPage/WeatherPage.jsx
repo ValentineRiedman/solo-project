@@ -33,8 +33,8 @@ function WeatherPage() {
                     <div className="weather">
                         <p>Minneapolis</p>
                         <img className="icon" src={weather.properties.periods[0].icon} />{/*this displays the current weather icon from api*/}
-                        <p>{weather.properties.periods[0].shortForecast} Temp:{weather.properties.periods[0].temperature}°</p>{/*this displays the shortForecast from api*/}
-                        <p></p>{/*this displays the "current temp" from api*/}
+                        <p wrap="wrap">{weather.properties.periods[0].shortForecast} </p>{/*this displays the shortForecast from api*/}
+                        <p>Temp:{weather.properties.periods[0].temperature}°</p>{/*this displays the "current temp" from api*/}
                         
                         {rain.features[0].properties.precipitationLast6Hours.value === null ?(
                             <p>Rain:0</p>

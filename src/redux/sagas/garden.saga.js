@@ -26,10 +26,13 @@ function* addGarden(action){
 function* pruneGarden(action) {
   
   try{
-    const response = yield axios.delete("/api/garden", action.payload.id );
+    console.log('in DELETE SAGA', action.payload );
+    const response = yield axios.delete(`/api/garden/${ action.payload }`);
+    console.log('in DELETE SAGA after delete', action.payload );
     yield put({ type: 'GET_GARDEN' }); 
   }catch (error) {
     console.log('delete failed', error);
+    alert('nope delete')
   }
 }
 function* gardenSaga(){

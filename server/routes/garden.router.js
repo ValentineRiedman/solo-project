@@ -39,9 +39,13 @@ router.post('/', (req, res) => {
 /**
  * DELETE
  */
-router.delete ('/', (req,res)=>{
+router.delete ('/:id', ( req, res )=>{
+  console.log( req.params.id );
+  console.log( 'inside DELETE' );
   const queryString = `DELETE FROM "garden" WHERE "veggie_id" = $1 AND "user_id" = $2;`;
-  const values = [ req.body.id , req.user.id ];
+  values = [ req.params.id , req.user.id ]
+  console.log(req.body)
+  console.log(req.body.id)
   pool.query(queryString, values ).then((results)=>{
     res.sendStatus(200); 
   }).catch ((err)=>{

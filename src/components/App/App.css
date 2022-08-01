@@ -154,9 +154,9 @@ Weather widget
 
 .weather{
   float: right;
-  margin-left: 10px;
-  margin-right: 90px;
-  padding: 3px;
+  margin-left: 5px;
+  margin-right: 60px;
+  padding: 1px;
   text-align: center;
   border-color: #014041;
   border-width: 1px 1px 3px;

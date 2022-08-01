@@ -7,7 +7,7 @@ function* getWeather(){
         yield put( { type: 'SET_WEATHER', payload: response.data } )
     }catch(err){
         console.log(err);
-        alert( 'nope' );
+        alert( 'nope weather' );
     }
 }
 
