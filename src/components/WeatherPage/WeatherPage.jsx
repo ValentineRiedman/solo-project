@@ -40,7 +40,7 @@ function WeatherPage() {
 
             {rain.features[0].properties.precipitationLast6Hours.value ===
             null ? (
-              <p>Rain:0 Water!</p>
+              <p>Rain:0</p>
             ) : (
               <p>{rain.features[0].properties.precipitationLast6Hours.value}</p> //this displays the rain from last 6 hours from api
             )}

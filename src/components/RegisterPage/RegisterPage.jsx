@@ -8,6 +8,7 @@ function RegisterPage() {
 
   return (
     <div>
+      <img className="mainLogo" src="/images/SalsaGarden_Logo.png"/>
       <RegisterForm />
 
       <center>

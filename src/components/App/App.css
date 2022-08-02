@@ -22,6 +22,7 @@ Container
 
 .container {
   padding: 20px;
+  margin-left:20px;
 }
 
 /* --------------------------------------------------------------------------------
@@ -101,13 +102,13 @@ Button
   border-radius: 0;
   background: none;
   font: inherit;
-  color: #444;
+  color: rgb(198, 193, 193);
 }
 
 .btn_asLink:hover {
   background-color: transparent;
-  border-color: #008183;
-  color: #008183;
+  border-color: #00acb0;
+  color: #00acb0;
 }
 
 /* --------------------------------------------------------------------------------
@@ -237,4 +238,20 @@ Heading
 
 .images{
   box-shadow: 3px 3px 6px lightblue;
+}
+
+/* --------------------------------------------------------------------------------
+User Page 
+-------------------------------------------------------------------------------- */
+
+.gardenNotes{
+  justify-content: right;
+  margin-top: 120px;
+  margin-right: 500px;;
+  position:fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;  
+  height: auto; 
+  width: auto;
 }
