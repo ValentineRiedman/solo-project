@@ -17,6 +17,10 @@ function UserPage() {
       <h2>Welcome, {user.username}!</h2>
       <p>Your ID is: {user.id}</p>
       <LogOutButton className="btn" />
+      <div className="gardenNotes">
+        <h2>Garden Notes</h2>
+
+      </div>
     </div>
   );
 }
