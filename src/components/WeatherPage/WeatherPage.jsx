@@ -36,7 +36,7 @@ function WeatherPage() {
             <p>{weather.properties.periods[0].shortForecast} </p>
             {/*this displays the shortForecast from api*/}
             <p>Temp:{weather.properties.periods[0].temperature}°</p>
-            {/*this displays the "current temp" from api*/}
+            {/*this displays the current temp from api*/}
 
             {rain.features[0].properties.precipitationLast6Hours.value ===
             null ? (

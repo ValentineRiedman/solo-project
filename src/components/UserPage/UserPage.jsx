@@ -25,7 +25,7 @@ function UserPage() {
         <h2>Garden Notes</h2>
       {garden.map((jardins) => (
         <div key={jardins.id}>
-          <p>{jardins.veg_name} : {jardins.notes}</p>
+          <h3>{jardins.veg_name} : <ul className="notes">{jardins.notes}</ul></h3>
         </div>
       ))}
 
